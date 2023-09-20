@@ -32,9 +32,10 @@ num_labs = 10
 #Did show up to at least 9/10 labs on tuesdays
 if (did_show_up == "Y"):
     print("We will be dropping your lowest lab.")
-    for i in range(1,11):
+    for i in range(0,11):
         print(f"Please input your lab {i + 1} grade (out of 100):")
         grade = float(input())
+        total_grade = 0
         total_grade += grade
         if min_grade > grade:
             min_grade = grade
@@ -45,9 +46,10 @@ if (did_show_up == "Y"):
 #Did not show up to at least 9/10 labs on tuesdays
 else:
     print("We will not be dropping your lowest lab.")
-    for i in range (1,11):
+    for i in range (0,11):
         print(f"Please input your lab {i + 1} grade (out of 100):")
         grade = float(input())
+        total_grade = 0
         total_grade += grade
     lab_avg = total_grade / 10
     print(f"Your average lab grade is {total_grade:.2f}")
@@ -65,23 +67,23 @@ while True:
     print("Q - Quit the program")
 
 print("Enter your choice:")
-    option = input().upper().strip() # a -> A
+option = input().upper().strip() # a -> A
 #Case H
-    if option == 'H':
-        final_exam_grade = 100
-        exam_avg = ((exam1_grade+exam2_grade+final_exam_grade)/3)
-        weighted_avg = (.1(TA)+.1(PA)+.1(Q)+.2(P)+.2(lab_avg)+.3(exam_avg))/(.1+.1+.1+.2+.2+.2+.3)
-        highest_letter = 0
-        if exam_avg and weighted_avg >= 89.5:
-            highest_letter = 'A'
-        elif 89.5 >= exam_avg and weighted_avg >= 79.5:
-            highest_letter = 'B'
-        elif 79.5 >= exam_avg and weighted_avg >= 69.5:
-            highest_letter = 'C'
-        elif 69.5 >= exam_avg and weighted_avg >= 59.5:
-            highest_letter = 'D'
-        else:
-            highest_letter = 'D'
+if option == 'H':
+    final_exam_grade = 100
+    exam_avg = ((exam1_grade+exam2_grade+final_exam_grade)/3)
+    weighted_avg = (.1(TA)+.1(PA)+.1(Q)+.2(P)+.2(lab_avg)+.3(exam_avg))/(.1+.1+.1+.2+.2+.2+.3)
+    highest_letter = 0
+    if exam_avg and weighted_avg >= 89.5:
+        highest_letter = 'A'
+    elif 89.5 >= exam_avg and weighted_avg >= 79.5:
+        highest_letter = 'B'
+    elif 79.5 >= exam_avg and weighted_avg >= 69.5:
+        highest_letter = 'C'
+    elif 69.5 >= exam_avg and weighted_avg >= 59.5:
+        highest_letter = 'D'
+    else:
+        highest_letter = 'D'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_average:.2f} and your average exam score would be {exam_avg:.2f}.")
 #Case G
