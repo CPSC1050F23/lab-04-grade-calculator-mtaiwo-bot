@@ -108,21 +108,25 @@ while True:
         print("What grade do you want to get in the class? (A,B,C,D)")
         desired_grade = str(input()).upper().strip()
         while not (desired_grade == "A" or desired_grade == "B" or desired_grade == "C" or desired_grade == "D"):
-        print("Select A, B, C, or D.")
+            print("Select A, B, C, or D.")
         desired_grade = str(input()).upper().strip()
-min_scores = {
-    'A': 89.5,
-    'B': 79.5,
-    'C': 69.5,
-    'D': 59.5
-}
-possible_lowest_final = 3*min_scores[desired_grade]-(exam1_grade+exam2_grade)
-weighted_avg = (exam1_grade+exam2_grade+2*possible_lowest_final)/4
-    print("You're failing lab! You will not pass the class.")
+        def calculate_minimum_final_exam_score(desired_grade):
+            min_scores = {
+                'A': 89.5,
+                'B': 79.5,
+                'C': 69.5,
+                'D': 59.5
+            }
+            exams_average_score = 3 * desired_grade - (exam1_grade+exam2_grade)
+            weighted_average_score = 4 * desired_grade - ((TA*0.1)+PA*0.1+Q*0.1+P*0.2+lab_avg*0.2+exam_avg*0.3/(0.1+0.1+0.1+0.2+0.2+0.2+0.3))
+            possible_lowest_final = max(exams_average_score, weighted_average_score)
+            return possible_lowest_final
+            print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
+            if weighted_average_score > exams_average_score:
+                print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
+            else:
+                print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
 
-print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
-print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
-print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
 #Case Q
     elif option == 'Q':
         break
@@ -130,3 +134,4 @@ print(f"You're failing lab and your exam average is not high enough to get that 
     else:
         print("Invalid option, please choose a valid option.")
         continue
+print("You're failing lab! You will not pass the class.")
