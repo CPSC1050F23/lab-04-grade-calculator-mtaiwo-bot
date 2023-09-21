@@ -64,8 +64,8 @@ while True:
     print("S - Score necessary on Final Exam for desired grade")
     print("Q - Quit the program")
     print("Enter your choice:")
-    option = input().upper().strip() # a -> A
 
+    option = input().upper().strip() # a -> A
 #Case H
     highest_letter = ''
     final_exam_grade = 0
