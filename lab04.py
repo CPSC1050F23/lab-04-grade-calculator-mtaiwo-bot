@@ -27,30 +27,30 @@ while not (did_show_up == "Y" or did_show_up == "N"):
     did_show_up = str(input()).strip()
 
 #Find the users lab grade
-min_grade = 100
+min_grade = 1000
 num_labs = 10
 total_grade = 0
 #Did show up to at least 9/10 labs on tuesdays
 if (did_show_up == "Y"):
     print("We will be dropping your lowest lab.")
-    for i in range(9):
+    for i in range(10):
         print(f"Please input your lab {i + 1} grade (out of 100):")
         lab_grade = float(input())
         total_grade += lab_grade
         if min_grade > lab_grade:
             min_grade = lab_grade
             num_labs - 1
-    total_grade -= min_grade
-    lab_avg = total_grade / 9     
+            total_grade -= min_grade
+            lab_avg = total_grade / 9     
     print(f"Your lowest lab grade was a {min_grade:.2f}, and we dropped your lowest lab so your lab grade is a {lab_avg:.2f}.")
 #Did not show up to at least 9/10 labs on tuesdays
 else:
-    print("We will not be dropping your lowest lab.")
-    for i in range (9):
+    print("We will not dropping your lowest lab.")
+    for i in range (10):
         print(f"Please input your lab {i + 1} grade (out of 100):")
         lab_grade = float(input())
         total_grade += lab_grade
-    lab_avg = total_grade / 10
+        lab_avg = total_grade / 10
     print(f"Your average lab grade is {lab_avg:.2f}")
 #Ask user for exam grades
 print("What is your first exam grade?")
