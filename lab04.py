@@ -39,8 +39,7 @@ if (attendance == "Y"):
         lab_total += lab_grade
         if minimum_lab > lab_grade:
             minimum_lab = lab_grade
-    lab_total -= minimum_lab
-    print(lab_total)        
+    lab_total -= minimum_lab        
     lab_avg= lab_total / 9
     print(f"Your lowest lab grade was a {minimum_lab:.2f}, and we dropped your lowest lab so your lab grade is a {lab_avg:.2f}.")
 #Did not show up to at least 9/10 labs on tuesdays
@@ -51,7 +50,7 @@ else:
         lab_grade = float(input())
         lab_total += lab_grade
     lab_avg = lab_total / 10
-    print(f"Your average lab grade is {lab_avg:.2f}")
+    print(f"Your average lab grade is a {lab_avg:.2f}")
 #Ask user for exam grades
 print("What is your first exam grade?")
 exam1_grade = float(input())
