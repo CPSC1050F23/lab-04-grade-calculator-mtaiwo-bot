@@ -67,10 +67,6 @@ while True:
 
     option = input().upper().strip() # a -> A
 #Case H
-    highest_letter = ''
-    final_exam_grade = 0
-    exam_avg = 0
-    weighted_avg = 0
     if option == 'H':
         final_exam_grade = 100
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3
