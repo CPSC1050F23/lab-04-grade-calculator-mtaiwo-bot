@@ -84,8 +84,8 @@ while True:
             highest_letter = 'C'
         elif maximum_value >= 59.5:
             highest_letter = 'D'
-    print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
-    print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
+        print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
+        print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
 #Case G
     if option == 'G':
         final_exam_grade = float(input())
@@ -100,8 +100,8 @@ while True:
             highest_letter = 'C'
         elif maximum_value >= 59.5:
             highest_letter = 'D'
-    print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
-    print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
+        print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
+        print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
 #Case S
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
