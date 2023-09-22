@@ -65,7 +65,7 @@ while True:
     print("Q - Quit the program")
     print("Enter your choice:")
     option = input().upper().strip() # a -> A
-    if option != 'H' or option != 'G' or option != 'S' or option != 'Q':
+    if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
         print("Invalid option, please choose a valid option.")
         option = input().upper().strip() # a -> A
 #Case H
@@ -112,7 +112,7 @@ while True:
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
         desired_grade = str(input()).upper().strip()
-        if desired_grade != 'A' or desired_grade != 'B' or desired_grade != 'C' or desired_grade != 'D':
+        if desired_grade != 'A' and desired_grade != 'B' and desired_grade != 'C' and desired_grade != 'D':
             print("Select A, B, C, or D.")
         if desired_grade == 'A':
             minimum_score = 89.5
