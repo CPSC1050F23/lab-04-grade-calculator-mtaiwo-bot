@@ -73,14 +73,14 @@ while True:
         final_exam_grade = 100
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3.0
         weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
-        maximum_value = max(exam_avg,weighted_avg)
+        maximum_value = min(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
-        elif 89.5 >= maximum_value and maximum_value >= 79.5:
+        elif maximum_value < 89.5 and maximum_value >= 79.5:
             highest_letter = 'B'
-        elif 79.5 >= maximum_value and maximum_value >= 69.5:
+        elif maximum_value < 79.5 and maximum_value >= 69.5:
             highest_letter = 'C'
-        elif 69.5 >= maximum_value and maximum_value >= 59.5:
+        elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
         else:
             highest_letter = 'F'
@@ -98,11 +98,11 @@ while True:
         maximum_value = max(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
-        elif 89.5 >= maximum_value and maximum_value >= 79.5:
+        elif maximum_value < 89.5 and maximum_value >= 79.5:
             highest_letter = 'B'
-        elif 79.5 >= maximum_value and maximum_value >= 69.5:
+        elif maximum_value < 79.5 and maximum_value >= 69.5:
             highest_letter = 'C'
-        elif 69.5 >= maximum_value and maximum_value >= 59.5:
+        elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
         else:
             highest_letter = 'F'
