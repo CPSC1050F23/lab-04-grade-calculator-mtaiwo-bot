@@ -65,9 +65,10 @@ while True:
     print("Q - Quit the program")
     print("Enter your choice:")
     option = input().upper().strip() # a -> A
-    if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
-        print("Invalid option, please choose a valid option.")
-        option = input().upper().strip() # a -> A
+
+if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
+    print("Invalid option, please choose a valid option.")
+    option = input().upper().strip() # a -> A
 #Case H
     if option == 'H':
         final_exam_grade = 100
@@ -108,7 +109,6 @@ while True:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
-minimum_score = 0
 #Case S
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
