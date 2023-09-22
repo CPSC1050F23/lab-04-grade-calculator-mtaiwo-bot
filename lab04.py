@@ -102,8 +102,6 @@ while True:
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
         desired_grade = str(input()).upper().strip()
-        exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3
-        weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
         if desired_grade == 'A':
             minimum_score = 89.5
         elif desired_grade == 'B':
@@ -112,10 +110,17 @@ while True:
             minimum_score = 69.5
         elif desired_grade == 'D':
             minimum_score = 59.5
-        possible_lowest_final = ((weighted_avg-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg))*3/0.3)-(exam1_grade+exam2_grade)
-        print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
-    
-
+        lowest_final = (minimum_score*3)-(exam1_grade+exam2_grade)
+        possible_lowest_final = ((minimum_score-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg))*3/0.3)-(exam1_grade+exam2_grade)
+        possible_lowest_final = max(lowest_final,possible_lowest_final)
+        if possible_lowest_final <= 100 and lab_avg >= 60:
+            print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
+        elif possible_lowest_final <= 100 and lab_avg not >= 60:
+            print("You're failing lab! You will not pass the class.")
+        elif possible_lowest_final not <= 100 and lab_avg >= 60:
+            print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
+        elif possible_lowest_final not <= 100 and lab_avg not >= 60:
+            print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
 
     if option == 'Q':
         break
