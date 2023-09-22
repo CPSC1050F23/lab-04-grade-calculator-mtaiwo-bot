@@ -67,6 +67,11 @@ while True:
     option = input().upper().strip() # a -> A
     if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
         print("Invalid option, please choose a valid option.")
+        print("\nPlease choose one of these options:")
+        print("H - Highest possible grade with 100 percent Final Exam Score")
+        print("G - Grade based on possible Final Exam Score")
+        print("S - Score necessary on Final Exam for desired grade")
+        print("Q - Quit the program")
         print("Enter your choice:")
         option = input().upper().strip() # a -> A
 #Case H
@@ -125,7 +130,7 @@ while True:
             minimum_score = 59.5
         lowest_final = (minimum_score*3)-(exam1_grade+exam2_grade)
         possible_lowest_final = ((minimum_score-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg))*3/0.3)-(exam1_grade+exam2_grade)
-        possible_lowest_final = max(lowest_final,possible_lowest_final)
+        possible_lowest_final = min(lowest_final,possible_lowest_final)
         if possible_lowest_final <= 100 and lab_avg >= 60:
             print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
         elif possible_lowest_final <= 100 and not lab_avg >= 60:
