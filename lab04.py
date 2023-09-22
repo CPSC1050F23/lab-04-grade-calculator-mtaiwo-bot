@@ -82,7 +82,7 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
-        else:
+        elif maximum_value < 59.5:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
@@ -104,7 +104,7 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
-        else:
+        elif maximum_value < 59.5:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
@@ -112,6 +112,8 @@ while True:
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
         desired_grade = str(input()).upper().strip()
+        if desired_grade != 'A' and desired_grade != 'B' and desired_grade != 'C' and desired_grade != 'D':
+            print("Select A, B, C, or D.")
         if desired_grade == 'A':
             minimum_score = 89.5
         elif desired_grade == 'B':
