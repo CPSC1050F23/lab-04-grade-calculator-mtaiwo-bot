@@ -65,7 +65,7 @@ while True:
     print("Q - Quit the program")
     print("Enter your choice:")
     option = input().upper().strip() # a -> A
-    while not (option == 'H' and option == 'G' and option == 'S' and option == 'Q'):
+    if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
         print("Invalid option, please choose a valid option.")
         option = input().upper().strip() # a -> A
 #Case H
