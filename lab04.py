@@ -76,13 +76,13 @@ while True:
         maximum_value = max(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
-        elif maximum_value < 89.5 and maximum_value >= 79.5:
+        elif 89.5 >= maximum_value and maximum_value >= 79.5:
             highest_letter = 'B'
-        elif maximum_value < 79.5 and maximum_value >= 69.5:
+        elif 79.5 >= maximum_value and maximum_value >= 69.5:
             highest_letter = 'C'
-        elif maximum_value < 69.5 and maximum_value >= 59.5:
+        elif 69.5 >= maximum_value and maximum_value >= 59.5:
             highest_letter = 'D'
-        elif maximum_value < 59.5:
+        else:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
@@ -98,13 +98,13 @@ while True:
         maximum_value = max(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
-        elif maximum_value < 89.5 and maximum_value >= 79.5:
+        elif 89.5 >= maximum_value and maximum_value >= 79.5:
             highest_letter = 'B'
-        elif maximum_value < 79.5 and maximum_value >= 69.5:
+        elif 79.5 >= maximum_value and maximum_value >= 69.5:
             highest_letter = 'C'
-        elif maximum_value < 69.5 and maximum_value >= 59.5:
+        elif 69.5 >= maximum_value and maximum_value >= 59.5:
             highest_letter = 'D'
-        elif maximum_value < 59.5:
+        else:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
