@@ -84,6 +84,7 @@ while True:
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
 #Case G
     if option == 'G':
+        print('Estimate your grade on the final exam:')
         final_exam_grade = float(input())
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3
         weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
