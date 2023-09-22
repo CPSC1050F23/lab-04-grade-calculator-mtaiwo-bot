@@ -67,7 +67,7 @@ while True:
     option = input().upper().strip() # a -> A
     while not (option == 'H' or option == 'G' or option == 'S' or option == 'Q'):
         print("Invalid option, please choose a valid option.")
-    option = input().upper().strip() # a -> A
+        option = input().upper().strip() # a -> A
 #Case H
     if option == 'H':
         final_exam_grade = 100
