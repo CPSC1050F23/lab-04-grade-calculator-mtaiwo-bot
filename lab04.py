@@ -67,10 +67,11 @@ while True:
     option = input().upper().strip() # a -> A
     if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
         print("Invalid option, please choose a valid option.")
+        option = input().upper().strip() # a -> A
 #Case H
     if option == 'H':
         final_exam_grade = 100
-        exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3
+        exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3.0
         weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
         maximum_value = max(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
@@ -81,6 +82,8 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
+        else:
+            highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
 #Case G
@@ -90,7 +93,7 @@ while True:
         if final_exam_grade < 0:
             print('That does not make any sense. Exiting program. You must make between a 0 and 100.')
             exit(0)
-        exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3
+        exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3.0
         weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
         maximum_value = max(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
@@ -101,6 +104,8 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
+        else:
+            highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
 #Case S
