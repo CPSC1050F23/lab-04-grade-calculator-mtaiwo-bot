@@ -50,7 +50,7 @@ else:
         lab_grade = float(input())
         lab_total += lab_grade
     lab_avg = lab_total / 10
-    print(f"Your average lab grade is a {lab_avg:.2f}")
+    print(f"Your average lab grade is a {lab_avg:.2f}.")
 #Ask user for exam grades
 print("What is your first exam grade?")
 exam1_grade = float(input())
@@ -115,6 +115,8 @@ while True:
         possible_lowest_final = ((weighted_avg-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg))*3/0.3)-(exam1_grade+exam2_grade)
         print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
     
+
+
     if option == 'Q':
         break
 
