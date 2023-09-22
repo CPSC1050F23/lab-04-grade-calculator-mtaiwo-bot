@@ -67,6 +67,7 @@ while True:
     option = input().upper().strip() # a -> A
     if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
         print("Invalid option, please choose a valid option.")
+        print("Enter your choice:")
         option = input().upper().strip() # a -> A
 #Case H
     if option == 'H':
@@ -129,9 +130,9 @@ while True:
             print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
         elif possible_lowest_final <= 100 and not lab_avg >= 60:
             print("You're failing lab! You will not pass the class.")
-        elif not possible_lowest_final <= 100 and lab_avg >= 60:
+        elif not lowest_final <= 100 and lab_avg >= 60:
             print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
-        elif not possible_lowest_final <= 100 and not lab_avg >= 60:
+        elif not lowest_final <= 100 and not lab_avg >= 60:
             print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
 
     if option == 'Q':
