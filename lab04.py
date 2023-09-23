@@ -56,6 +56,7 @@ print("What is your first exam grade?")
 exam1_grade = float(input())
 print("What is your second exam grade?")
 exam2_grade = float(input())
+minimum_score = 0
 #Start the loop
 while True:
     print("\nPlease choose one of these options:")
