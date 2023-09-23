@@ -73,7 +73,7 @@ while True:
         final_exam_grade = 100
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3.0
         weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
-        maximum_value = max(exam_avg,weighted_avg)
+        maximum_value = min(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
         elif maximum_value < 89.5 and maximum_value >= 79.5:
@@ -82,7 +82,7 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
-        else:
+        elif maximum_value < 59.5 and maximum_value >= 0:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
