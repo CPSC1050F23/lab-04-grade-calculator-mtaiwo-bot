@@ -56,7 +56,6 @@ print("What is your first exam grade?")
 exam1_grade = float(input())
 print("What is your second exam grade?")
 exam2_grade = float(input())
-minimum_score = 0
 #Start the loop
 while True:
     print("\nPlease choose one of these options:")
@@ -122,7 +121,8 @@ while True:
         elif desired_grade == 'D':
             minimum_score = 59.5
         lowest_final = (minimum_score*3)-(exam1_grade+exam2_grade)
-        possible_lowest_final = ((minimum_score-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg))*3/0.3)-(exam1_grade+exam2_grade)
+        exam_avg = (exam1_grade+exam2_grade+lowest_final)/3.0
+        possible_lowest_final = ((minimum_score-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg))*(3/0.3))-(exam1_grade+exam2_grade)
         possible_lowest_final = max(lowest_final,possible_lowest_final)
         if possible_lowest_final <= 100 and lab_avg >= 60:
             print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
