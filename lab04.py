@@ -72,7 +72,7 @@ while True:
     if option == 'H':
         final_exam_grade = 100
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3.0
-        weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)/ (0.1+0.1+0.1+0.2+0.2+0.3)
+        weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
         maximum_value = min(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
@@ -94,7 +94,7 @@ while True:
             print('That does not make any sense. Exiting program. You must make between a 0 and 100.')
             exit(0)
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3.0
-        weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)/ (0.1+0.1+0.1+0.2+0.2+0.3)
+        weighted_avg = (0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*exam_avg)
         maximum_value = min(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
@@ -112,6 +112,9 @@ while True:
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
         desired_grade = str(input()).upper().strip()
+        if desired_grade != 'A' and desired_grade != 'B' and desired_grade != 'C' and desired_grade != 'D':
+            print("Invalid option, please choose a valid option.")
+        minimum_score = 0
         if desired_grade == 'A':
             minimum_score = 89.5
         elif desired_grade == 'B':
