@@ -114,6 +114,7 @@ while True:
         desired_grade = str(input()).upper().strip()
         if desired_grade != 'A' and desired_grade != 'B' and desired_grade != 'C' and desired_grade != 'D':
             print("Invalid option, please choose a valid option.")
+            desired_grade = str(input()).upper().strip()
         minimum_score = 0
         if desired_grade == 'A':
             minimum_score = 89.5
