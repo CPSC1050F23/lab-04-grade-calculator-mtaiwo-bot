@@ -66,6 +66,7 @@ while True:
     print("Enter your choice:")
     option = str(input()).strip().upper() # a -> A
     while not (option == 'H' or option == 'G' or option == 'S' or option == 'Q'):
+        print("Invalid option, please choose a valid option.")
         print("\nPlease choose one of these options:")
         print("H - Highest possible grade with 100 percent Final Exam Score")
         print("G - Grade based on possible Final Exam Score")
