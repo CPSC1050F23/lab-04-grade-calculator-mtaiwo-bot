@@ -67,12 +67,6 @@ while True:
     option = str(input()).strip().upper() # a -> A
     while not (option == 'H' or option == 'G' or option == 'S' or option == 'Q'):
         print("Invalid option, please choose a valid option.")
-        print("\nPlease choose one of these options:")
-        print("H - Highest possible grade with 100 percent Final Exam Score")
-        print("G - Grade based on possible Final Exam Score")
-        print("S - Score necessary on Final Exam for desired grade")
-        print("Q - Quit the program")
-        print("Enter your choice:")
         option = str(input()).strip().upper() # a -> A
 #Case H
     if option == 'H':
@@ -117,11 +111,8 @@ while True:
 #Case S
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
-        print("Select A, B, C, or D.")
         desired_grade = str(input()).strip().upper()
         while not (desired_grade == 'A' or desired_grade == 'B' or desired_grade == 'C' or desired_grade == 'D'):
-            print("Invalid option, please choose a valid option.")
-            print("What grade do you want to get in the class? (A,B,C,D)")
             print("Select A, B, C, or D.")
             desired_grade = str(input()).strip().upper()
         minimum_score = 0
