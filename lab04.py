@@ -64,10 +64,10 @@ while True:
     print("S - Score necessary on Final Exam for desired grade")
     print("Q - Quit the program")
     print("Enter your choice:")
-    option = input().upper().strip() # a -> A
-    if option != 'H' and option != 'G' and option != 'S' and option != 'Q':
+    option = str(input()).strip().upper() # a -> A
+    if option != 'H' or option != 'G' or option != 'S' or option != 'Q':
         print("Invalid option, please choose a valid option.")
-        option = input().upper().strip() # a -> A
+        option = str(input()).strip().upper() # a -> A
 #Case H
     if option == 'H':
         final_exam_grade = 100
