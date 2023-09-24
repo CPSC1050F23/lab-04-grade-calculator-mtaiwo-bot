@@ -118,12 +118,12 @@ while True:
     if option == 'S':
         print("What grade do you want to get in the class? (A,B,C,D)")
         print("Select A, B, C, or D.")
-        desired_grade = str(input()).upper().strip()
+        desired_grade = str(input()).strip().upper()
         while not (desired_grade == 'A' or desired_grade == 'B' or desired_grade == 'C' or desired_grade == 'D'):
             print("Invalid option, please choose a valid option.")
             print("What grade do you want to get in the class? (A,B,C,D)")
             print("Select A, B, C, or D.")
-            desired_grade = str(input()).upper().strip()
+            desired_grade = str(input()).strip().upper()
         minimum_score = 0
         if desired_grade == 'A':
             minimum_score = 89.5
