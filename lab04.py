@@ -5,7 +5,7 @@ Assignment:     Lab 04
 Course:         CPSC1051
 Lab Section:    003
 
-CODE DESCRIPTION:
+CODE DESCRIPTION: This a calculator to determine potential final grades for CPSC 1050
 
 """
 
@@ -88,7 +88,7 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
-        else:
+        elif maximum_value < 59.5:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
@@ -110,7 +110,7 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
-        else:
+        elif maximum_value < 59.5:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
@@ -137,11 +137,11 @@ while True:
             print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
         elif possible_lowest_final <= 100 and not lab_avg >= 60:
             print("You're failing lab! You will not pass the class.")
-        elif not possible_lowest_final < 100 and lab_avg > 60:
+        elif not possible_lowest_final <= 100 and lab_avg >= 60:
             print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
         elif not possible_lowest_final <= 100 and not lab_avg >= 60:
             print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
-    
+#if user enters "Q" quit the program
     if option == 'Q':
         break
 
