@@ -130,7 +130,7 @@ while True:
             minimum_score = 69.5
         elif desired_grade == 'D':
             minimum_score = 59.5
-        lowest_final = (minimum_score*3)-(exam1_grade+exam2_grade)
+        lowest_final = (3*exam_avg)-(exam1_grade+exam2_grade)
         possible_lowest_final = ((minimum_score-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*minimum_score))*(3/0.3))-(exam1_grade+exam2_grade)
         possible_lowest_final = max(lowest_final,possible_lowest_final)
         if possible_lowest_final <= 100 and lab_avg >= 60:
@@ -138,7 +138,7 @@ while True:
         elif possible_lowest_final <= 100 and not lab_avg >= 60:
             print("You're failing lab! You will not pass the class.")
         elif not possible_lowest_final <= 100 and lab_avg >= 60:
-            print(f"You can't get that grade because your exam average is not high enough. You would need at least a {possible_lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
+            print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
         elif not possible_lowest_final <= 100 and not lab_avg >= 60:
             print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
     
