@@ -79,7 +79,7 @@ while True:
         final_exam_grade = 100
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/ 3
         weighted_avg = (0.1*textbook_avg)+(0.1*programming_avg)+(0.1*quiz_avg)+(0.2*project_avg)+(0.2*lab_avg)+(0.3*exam_avg)/(0.1+0.1+0.1+0.2+0.2+0.3)
-        maximum_value = max(exam_avg,weighted_avg)
+        maximum_value = min(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
         elif maximum_value < 89.5 and maximum_value >= 79.5:
@@ -101,7 +101,7 @@ while True:
             exit(0)
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/ 3
         weighted_avg = (0.1*textbook_avg)+(0.1*programming_avg)+(0.1*quiz_avg)+(0.2*project_avg)+(0.2*lab_avg)+(0.3*exam_avg)/(0.1+0.1+0.1+0.2+0.2+0.3)
-        maximum_value = max(exam_avg,weighted_avg)
+        maximum_value = min(exam_avg,weighted_avg)
         if maximum_value >= 89.5:
             highest_letter = 'A'
         elif maximum_value < 89.5 and maximum_value >= 79.5:
