@@ -130,9 +130,9 @@ while True:
             minimum_score = 69.5
         elif desired_grade == 'D':
             minimum_score = 59.5
-        lowest_final = (3*possible_lowest_final)-(exam1_grade+exam2_grade)
         possible_lowest_final = ((minimum_score-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*minimum_score))*(3/0.3))-(exam1_grade+exam2_grade)
         possible_lowest_final = max(lowest_final,possible_lowest_final)
+        lowest_final = (3*possible_lowest_final)-(exam1_grade+exam2_grade)
         if possible_lowest_final <= 100 and lab_avg >= 60:
             print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
         elif possible_lowest_final <= 100 and not lab_avg >= 60:
