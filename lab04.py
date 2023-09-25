@@ -96,7 +96,7 @@ while True:
     if option == 'G':
         print('Estimate your grade on the final exam:')
         final_exam_grade = float(input())
-        while not (final_exam_grade > 0 and final_exam_grade <= 100):
+        while not (final_exam_grade >= 0 and final_exam_grade <= 100):
             print('That does not make any sense. Exiting program. You must make between a 0 and 100.')
             exit(0)
         exam_avg = (exam1_grade+exam2_grade+final_exam_grade)/3.0
