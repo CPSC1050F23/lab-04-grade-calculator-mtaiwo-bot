@@ -88,7 +88,7 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
-        elif lab_avg < 59.5:
+        elif maximum_value < 59.5:
             print("You're failing lab! You will not pass the class.")
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
@@ -110,7 +110,7 @@ while True:
             highest_letter = 'C'
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
-        elif lab_avg < 59.5:
+        elif maximum_value < 59.5:
             print("You're failing lab! You will not pass the class.")
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
