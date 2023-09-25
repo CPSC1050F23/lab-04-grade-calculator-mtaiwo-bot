@@ -120,6 +120,7 @@ while True:
         desired_grade = str(input()).strip().upper()
         while not (desired_grade == 'A' or desired_grade == 'B' or desired_grade == 'C' or desired_grade == 'D'):
             print("Select A, B, C, or D.")
+            print("What grade do you want to get in the class? (A,B,C,D)")
             desired_grade = str(input()).strip().upper()
         if desired_grade == 'A':
             minimum_score = 89.5
