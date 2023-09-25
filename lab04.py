@@ -138,7 +138,7 @@ while True:
         elif possible_lowest_final <= 100 and not lab_avg >= 60:
             print("You're failing lab! You will not pass the class.")
         elif not possible_lowest_final <= 100 and lab_avg >= 60:
-            print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
+            print(f"You can't get that grade because your exam average is not high enough. You would need at least a {possible_lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
         elif not possible_lowest_final <= 100 and not lab_avg >= 60:
             print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
     
