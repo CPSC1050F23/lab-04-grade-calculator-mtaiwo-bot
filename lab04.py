@@ -143,7 +143,7 @@ while True:
             if lab_avg < 59.5:
                 print("You're failing lab! You will not pass the class.")
             elif lab_avg >= 59.5:
-            print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
+                print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
     
     if option == 'Q':
         break
