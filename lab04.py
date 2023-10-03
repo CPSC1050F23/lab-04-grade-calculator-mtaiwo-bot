@@ -133,15 +133,18 @@ while True:
         lowest_final = (3*minimum_score)-(exam1_grade+exam2_grade)
         possible_lowest_final = ((minimum_score-(0.1*textbook_avg+0.1*programming_avg+0.1*quiz_avg+0.2*project_avg+0.2*lab_avg+0.3*minimum_score))*(3/0.3))-(exam1_grade+exam2_grade)
         possible_lowest_final = max(lowest_final,possible_lowest_final)
-        if possible_lowest_final <= 100 and lab_avg >= 60:
-            print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
-        elif possible_lowest_final <= 100 and not lab_avg >= 60:
-            print("You're failing lab! You will not pass the class.")
-        elif not possible_lowest_final <= 100 and lab_avg >= 60:
+        if possible_lowest_final > 100:
+            lowest_final = possible_lowest_final
             print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
-        elif not possible_lowest_final <= 100 and not lab_avg >= 60:
-            print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
-#if user enters "Q" quit the program
+            if lab_avg < 59.5:
+                print("You're failing lab! You will not pass the class.")
+                print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
+        elif possible_lowest_final <= 100:
+            if lab_avg < 59.5:
+                print("You're failing lab! You will not pass the class.")
+            elif lab_avg >= 59.5:
+            print(f"Your lowest possible final exam grade to get your desired grade ({desired_grade}) is a {possible_lowest_final:.2f}%")
+    
     if option == 'Q':
         break
 
