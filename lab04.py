@@ -142,7 +142,7 @@ while True:
         possible_lowest_final = max(lowest_final,possible_lowest_final)
         if possible_lowest_final > 100:
             lowest_final = possible_lowest_final
-            print(f"You can't get that grade because your exam average is not high enough. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
+            print(f"You can't get that grade because your exam average is not high enough. You would need at least a {possible_lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
             if lab_avg < 59.5:
                 print("You're failing lab! You will not pass the class.")
                 print(f"You're failing lab and your exam average is not high enough to get that grade. You would need at least a {lowest_final:.2f}% on the final to get that grade... and that isn't possible.")
