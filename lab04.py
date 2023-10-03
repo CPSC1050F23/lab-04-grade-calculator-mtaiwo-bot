@@ -90,6 +90,10 @@ while True:
             highest_letter = 'D'
         elif maximum_value < 59.5:
             highest_letter = 'F'
+        
+        if lab_avg < 59.5:
+            highest_letter = 'F'
+
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
 #Case G
@@ -111,6 +115,9 @@ while True:
         elif maximum_value < 69.5 and maximum_value >= 59.5:
             highest_letter = 'D'
         elif maximum_value < 59.5:
+            highest_letter = 'F'
+        
+        if lab_avg < 59.5:
             highest_letter = 'F'
         print(f"Your grade would be a {highest_letter} if you got a {final_exam_grade:.2f} on the final.")
         print(f"Your final weighted score would be {weighted_avg:.2f} and your average exam score would be {exam_avg:.2f}.")
